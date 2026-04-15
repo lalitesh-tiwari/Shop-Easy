@@ -2,8 +2,16 @@ import { useParams, Link } from "react-router-dom";
 import { useEffect, useState, useContext } from "react";
 import { getProduct } from "../api/api";
 import { CartContext } from "../context/CartContext";
-import type { Product } from "../types";
 import "./ProductDetail.scss";
+
+type Product = {
+  id: number;
+  title: string;
+  price: number;
+  images: string[];
+  category: string;
+  description: string; 
+};
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -68,7 +76,7 @@ const ProductDetail = () => {
           
           {product.images.length > 1 && (
             <div className="pd-thumbnails">
-              {product.images.map((img, i) => (
+              {product.images.map((img: string, i: number) => (
                 <button 
                   key={i} 
                   className={`pd-thumb ${mainImage === i ? "active" : ""}`}
