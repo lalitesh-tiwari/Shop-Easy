@@ -39,7 +39,7 @@ Users can browse products, view product details, apply filters, and manage a sho
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/lalitesh-tiwari/Shop-easy.git
+git clone https://github.com/lalitesh-tiwari/Shop-Easy.git
 cd e-commerce-app
 ```
 
@@ -113,4 +113,4 @@ npm run cypress
 
 ## Repository Link
 
-"https://github.com/lalitesh-tiwari/Shop-easy.git"
+"https://github.com/lalitesh-tiwari/Shop-Easy.git"
