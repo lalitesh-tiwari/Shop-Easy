@@ -1,5 +1,8 @@
 # SHOPEASY E-Commerce Web Application
 
+## Live Link
+https://shop-easy-neon.vercel.app/
+
 ## Overview
 
 This is a basic e-commerce web application built using React and TypeScript.
