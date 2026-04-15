@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, memo } from "react";
+import { useEffect, useState, useRef } from "react";
 import { getCategories } from "../api/api";
 import { useSearchParams } from "react-router-dom";
 import "./Filter.scss";
@@ -176,4 +176,4 @@ const Filter = () => {
   );
 };
 
-export default memo(Filter);
+export default Filter;

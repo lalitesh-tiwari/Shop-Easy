@@ -32,10 +32,6 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 24px;
-
-    @media (max-width: 640px) {
-        display: none;
-    }
 }
 
 .df-groups {
@@ -146,10 +142,6 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 18px;
-
-    @media (max-width: 640px) {
-        display: flex;
-    }
 }
 
 .mf-trigger {
@@ -328,5 +320,16 @@
 
     to {
         transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 640px) {
+    .df-wrap {
+        display: none;
+    }
+
+    .mf-wrap {
+        display: flex;
     }
 }

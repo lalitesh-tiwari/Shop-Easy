@@ -16,10 +16,6 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
-        @media (max-width: 500px) {
-            padding: 0.875rem 1rem;
-        }
     }
 
     .footer-brand {
@@ -131,8 +127,16 @@
                 transition: color 0.2s;
             }
         }
+    }
+}
 
-        @media (max-width: 500px) {
+@media (max-width: 500px) {
+    .footer {
+        .footer-content {
+            padding: 0.875rem 1rem;
+        }
+
+        .footer-cart {
             padding: 0.375rem 0.875rem 0.375rem 0.75rem;
 
             .footer-cart-info {
