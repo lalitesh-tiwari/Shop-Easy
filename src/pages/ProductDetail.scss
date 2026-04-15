@@ -1,0 +1,303 @@
+.pd-wrap {
+    max-width: 62.5rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    animation: fadeIn 0.3s ease;
+    font-family: 'BioSans', sans-serif;
+
+    @media (max-width: 600px) {
+        padding: 1.25rem 1rem;
+    }
+}
+
+.pd-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #777;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: color 0.2s;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: 'BioSans', sans-serif;
+
+    svg {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+
+    &:hover {
+        color: #111;
+    }
+}
+
+.pd-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2.5rem;
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+.pd-img-side {
+    .pd-main-img {
+        border-radius: 0.75rem;
+        overflow: hidden;
+        background: #f8f8f8;
+        border: 0.0625rem solid #eee;
+        aspect-ratio: 1 / 1;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            padding: 1rem;
+        }
+    }
+
+    .pd-thumbnails {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.75rem;
+
+        .pd-thumb {
+            width: 3.75rem;
+            height: 3.75rem;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            border: 0.0625rem solid #eee;
+            background: #fafafa;
+            cursor: pointer;
+            padding: 0;
+            transition: border-color 0.2s;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            &:hover {
+                border-color: #ccc;
+            }
+
+            &.active {
+                border: 0.125rem solid #111;
+            }
+        }
+    }
+}
+
+.pd-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    .pd-cat {
+        font-size: 0.6875rem;
+        text-transform: uppercase;
+        letter-spacing: 0.09375rem;
+        color: #999;
+        font-weight: 600;
+    }
+
+    .pd-title {
+        font-size: 1.625rem;
+        font-weight: 700;
+        color: #111;
+        line-height: 1.3;
+        margin: 0;
+    }
+
+    .pd-price {
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: #111;
+        margin: 0;
+    }
+
+    .pd-desc {
+        font-size: 0.875rem;
+        color: #666;
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .pd-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+
+        @media (max-width: 400px) {
+            flex-direction: column;
+            align-items: stretch;
+        }
+    }
+
+    .pd-qty {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-radius: 0.5rem;
+        border: 0.0625rem solid #ddd;
+
+        button {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            font-size: 1.25rem;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: #f5f5f5;
+                color: #111;
+            }
+
+            &:active {
+                background: #eee;
+            }
+        }
+
+        span {
+            min-width: 2.25rem;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            color: #111;
+        }
+    }
+
+    .pd-btn {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.75rem 1.5rem;
+        background: #111;
+        color: #fff;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+        white-space: nowrap;
+
+        svg {
+            width: 1.125rem;
+            height: 1.125rem;
+        }
+
+        &:hover {
+            background: #333;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+
+        &--added {
+            background: #2a9d5c;
+
+            &:hover {
+                background: #238c4e;
+            }
+        }
+    }
+
+    .pd-view-cart {
+        color: #111;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.8125rem;
+        padding: 0.25rem 0;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.pd-skeleton {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 2.5rem;
+
+    .pd-skeleton-img {
+        aspect-ratio: 1 / 1;
+        background: #f0f0f0;
+        border-radius: 0.75rem;
+        animation: pulse 1.5s infinite;
+    }
+
+    .pd-skeleton-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .pd-skeleton-line {
+        height: 1rem;
+        background: #f0f0f0;
+        border-radius: 0.375rem;
+        animation: pulse 1.5s infinite;
+    }
+
+    .pd-skeleton-line-short {
+        height: 1rem;
+        width: 40%;
+        background: #f0f0f0;
+        border-radius: 0.375rem;
+        animation: pulse 1.5s infinite;
+    }
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.pd-loading {
+    padding: 3.75rem;
+    text-align: center;
+    color: #999;
+    font-size: 0.875rem;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(0.5rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
